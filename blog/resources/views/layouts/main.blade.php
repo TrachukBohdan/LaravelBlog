@@ -32,6 +32,11 @@
       }
       .row.content {height: auto;}
     }
+
+    textarea {
+        background: black;
+    }
+
   </style>
 </head>
 <body>
@@ -58,13 +63,9 @@
     </div>
 
     <div class="col-sm-9">
-      <h4><small>RECENT POSTS</small></h4>
-      <hr>
-
-      @include('layouts.parts.short_article')
-      @include('layouts.parts.short_article')
-      @include('layouts.parts.short_article')
-
+        <!-- content -->
+        @yield('content')
+        <!-- end content -->
     </div>
   </div>
 </div>
