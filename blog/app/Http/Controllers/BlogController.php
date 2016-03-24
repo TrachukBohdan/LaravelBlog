@@ -8,8 +8,9 @@ use App\Http\Requests;
 
 class BlogController extends Controller
 {
-    public function createPost()
+    public function createPost($id = null)
     {
-        return view('create-post');
+        $cats = [];
+        return view('create-post', ['id' => $id]);
     }
 }
