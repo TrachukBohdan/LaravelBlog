@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <title>Bootstrap Example</title>
+  <title>Laravel Blog</title>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
@@ -44,16 +44,16 @@
 <div class="container-fluid">
   <div class="row content">
     <div class="col-sm-3 sidenav">
-      <h4>John's Blog</h4>
+      <h4>Ще один блог на Laravel</h4>
       <ul class="nav nav-pills nav-stacked">
-        <li class="active"><a href="#section1">Home</a></li>
-        <li><a href="#section2">Friends</a></li>
-        <li><a href="#section3">Family</a></li>
-        <li><a href="#section3">Photos</a></li>
+        <li class="active"><a href="#section1">Головна</a></li>
+        <li><a href="#section2">Категорії</a></li>
+        <li><a href="#section3">Останні пости</a></li>
+        <li><a href="#section3">Останні коменти</a></li>
       </ul><br>
 
       <div class="input-group">
-        <input type="text" class="form-control" placeholder="Search Blog..">
+        <input type="text" class="form-control" placeholder="Пошук..">
         <span class="input-group-btn">
           <button class="btn btn-default" type="button">
             <span class="glyphicon glyphicon-search"></span>
@@ -71,7 +71,7 @@
 </div>
 
 <footer class="container-fluid">
-  <p>Footer Text</p>
+  <p>Laravel Blog</p>
 </footer>
 
 </body>
