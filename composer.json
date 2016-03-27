@@ -3,6 +3,7 @@
         "laravel/homestead": "^3.0"
     },
     "require": {
-        "monolog/monolog": "^1.18"
+        "monolog/monolog": "^1.18",
+        "nesbot/carbon": "^1.21"
     }
 }

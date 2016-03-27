@@ -47,7 +47,7 @@
       <h4>Ще один блог на Laravel</h4>
       <ul class="nav nav-pills nav-stacked">
         <li class="active"><a href="#section1">Головна</a></li>
-        <li><a href="#section2">Категорії</a></li>
+        <li><a href="{{action('CategoryController@index')}}">Категорії</a></li>
         <li><a href="#section3">Останні пости</a></li>
         <li><a href="#section3">Останні коменти</a></li>
       </ul><br>
