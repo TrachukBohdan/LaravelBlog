@@ -22,6 +22,7 @@
                      <tr>
                        <th>ID</th>
                        <th>Назва категорії</th>
+                       <th>Постів</th>
                        <th>Дата створення</th>
                        <th> Редагувати </th>
                        <th> Видалити </th>
@@ -32,8 +33,9 @@
                    @foreach($categories as $cat)
                        <tr>
                          <td>{{$cat->id}}</td>
-                         <td><a href="">{{$cat->name}}</a></td>
-                         <td>{{$cat->created_at}}</td>
+                         <td><a href="{{action('BlogController@categoryPosts', ['id'=>$cat->id])}}">{{$cat->name}}</a></td>
+                         <td>0</td>
+                         <td> {{$cat->created_at}}</td>
                          <td> <a href = "{{action('CategoryController@edit', ['id'=>$cat->id])}}">Редагувати</a> </td>
                          <td> <a href = "{{action('CategoryController@delete', ['id'=>$cat->id])}}">Видалити</a> </td>
                        </tr>

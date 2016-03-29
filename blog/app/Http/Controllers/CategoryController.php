@@ -8,6 +8,15 @@ use App\Category;
 use Carbon\Carbon;
 use Session;
 
+/*
+------------------------------------------------
+    Котроллер категорій
+    - створення
+    - видалення
+    - зміна
+------------------------------------------------
+*/
+
 class CategoryController extends Controller
 {
     // виведення категорій
@@ -26,7 +35,6 @@ class CategoryController extends Controller
     // Збереження категорії
     public function store(Request $request)
     {
-        //dd(new Carbon);
         $cat = new Category();
         $cat->name = $request->input('category');
         $cat->created_at = new Carbon();
@@ -44,14 +52,16 @@ class CategoryController extends Controller
         return redirect()->action('CategoryController@index');
     }
 
-    // Редагувати
+    // Форма редагування
     public function edit($id)
     {
         return view('edit-category', ['category' => Category::find($id)] );
     }
 
+    // Редагування категорії
     public function change($id, Request $request)
     {
+        // вибираємо категорію
         $cat = Category::find($id);
         $cat->name = $request->input('category');
         $cat->created_at = new Carbon();
