@@ -7,7 +7,7 @@
     {!! csrf_field() !!}
     <div class="form-group">
         <label for="category">Назва категорії:</label>
-        <input type="text" name="category" class="form-control" id="category">
+        <input type="text" placeholder="категорія" attribute="Кат" name="category" class="form-control" id="category">
     </div>
     <button type="submit" class="btn btn-default">Зберегти</button>
 </form>

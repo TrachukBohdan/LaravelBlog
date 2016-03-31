@@ -38,6 +38,8 @@ class CategoryController extends Controller
         // Перевірка
         $this->validate($request, [
             'category' => 'required'
+        ], [
+            'required' => 'Поле категорії є обовязковим'
         ]);
 
 

@@ -4,7 +4,7 @@ namespace App\Http\Requests;
 
 use App\Http\Requests\Request;
 
-class StoreBlogPostRequest extends Request
+    class StoreBlogPostRequest extends Request
 {
     /**
      * Determine if the user is authorized to make this request.
@@ -25,8 +25,16 @@ class StoreBlogPostRequest extends Request
     public function rules()
     {
         return [
-            'title' => 'required',
-            'text' => 'required'
+            'title' => 'required|min:3',
+            'text' => 'required|min:5'
+        ];
+    }
+
+    public function messages()
+    {
+        return [
+            'title.*' => 'Введіть поле заголовку',
+            'text.*' => 'Введіть текс поста'
         ];
     }
 }
