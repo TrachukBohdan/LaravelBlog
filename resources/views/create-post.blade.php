@@ -3,6 +3,7 @@
 @section('content')
 <h2> Create Post </h2>
 <hr />
+@include('layouts.parts.errors_list')
 <form role="form" method="post" action="{{action('BlogController@storePost')}}">
     {{csrf_field()}}
     <input type="hidden" name="id" value="{{$id}}" />

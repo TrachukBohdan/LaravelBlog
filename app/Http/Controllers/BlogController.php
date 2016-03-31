@@ -9,6 +9,7 @@ use App\Category;
 use Carbon\Carbon;
 use Session;
 
+
 class BlogController extends Controller
 {
 
@@ -36,7 +37,7 @@ class BlogController extends Controller
     }
 
     // Зберегти пост
-    public function storePost(Request $request)
+    public function storePost(Requests\StoreBlogPostRequest $request)
     {
         $post = new Post();
         $post->title = $request->input('title');
