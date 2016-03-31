@@ -35,6 +35,13 @@ class CategoryController extends Controller
     // Збереження категорії
     public function store(Request $request)
     {
+        // Перевірка
+        $this->validate($request, [
+            'category' => 'required'
+        ]);
+
+
+        // Збереження
         $cat = new Category();
         $cat->name = $request->input('category');
         $cat->created_at = new Carbon();

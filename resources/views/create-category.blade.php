@@ -2,6 +2,13 @@
 @section('content')
 <h2> Додати нову категорію </h2>
 <hr />
+@if( count($errors) > 0 )
+    <div class="alert alert-danger">
+        @foreach($errors->all()  as $err)
+            {{$err}} <br />
+        @endforeach
+    </div>
+@endif
 <form role="form" method="post" action="{{action('CategoryController@store')}}" >
     {!! csrf_field() !!}
     <div class="form-group">
